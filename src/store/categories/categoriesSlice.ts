@@ -2,13 +2,13 @@ import { createSlice } from "@reduxjs/toolkit";
 import actGetCategories from "./act/actGetCategories";
 import { TLoading } from "@customTypes/shared";
 import { TCategory } from "@customTypes/category";
-interface ICategoriesState {
+type TCategoriesState = {
   records: TCategory[];
   loading: TLoading;
   error: string | null;
 }
 
-const initialState: ICategoriesState = {
+const initialState: TCategoriesState = {
   records: [],
   loading: "idle",
   error: null,
